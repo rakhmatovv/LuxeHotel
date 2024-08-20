@@ -1,0 +1,132 @@
+{% load static %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.gstastic.com">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/bulma.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bulma.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+        <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <link rel="stylesheet" href="{% static 'css/Luxe.css' %}">
+        <link rel="stylesheet" href="{% static 'css/tabs.css' %}">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'css/Bora.css' %}">
+        <link rel="stylesheet" href="{% static 'css/services.css' %}">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+
+    <!-- Base header---------------------------------------------------------------------------------------- -->
+    <main class="__main">
+        <section class=" header_1">
+            <div class="hero">
+                <nav>
+                    <a href="{% url 'hotel:home' %}" class="logo">Luxe</a>
+                    <ul>
+                        <li><a href="{% url 'hotel:home' %}">Home</a></li>
+                        <li><a href="">Hotels</a>
+                            <ul class="dropdown">
+                                {% for room_category in category %}
+                                <li><a href="{% url 'hotel:room_category' room_category.slug %}">{{ room_category }}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+
+                        <li><a href="{% url 'hotel:services' %}">Services</a></li>
+
+                        {% if user.is_authenticated %}
+                        <li><a href="{% url 'users:sign_out' %}">Log Out</a></li>
+                        {% else %}
+                        <li><a href="{% url 'users:sign_in' %}">Log In</a></li>
+                        {% endif %}
+
+
+                    </ul>
+                </nav>
+            </div>
+        </section>
+    </main>
+
+
+    {% block content %}
+    {% endblock %}
+    <footer class="__footer">
+        <div class="__container">
+            <div class="__footer-lists">
+                <ul class="__rights __list">
+                    <li class="__footer-items">© Domain.com</li>
+                    <li class="__footer-items">All Rights Reserved</li>
+                    <li class="__footer-items">Designed by <span><a class="__footer-link"
+                                href="#">FreeHTML5.co</a></span>
+                    </li>
+                    <li class="__footer-items">Demo Images: Unsplash</li>
+                </ul>
+
+                <ul class="__company __list">
+
+                    <p class="__subtitle">Company</p>
+
+                    <li class="__footer-items"><a class="__footer-link" href="#">About Us</a></li>
+                    <li class="__footer-items"><a class="__footer-link" href="#">Hotels</a></li>
+                    <li class="__footer-items"><a class="__footer-link" href="#">Customer Care</a></li>
+                    <li class="__footer-items"><a class="__footer-link" href="#">Contact Us</a></li>
+                </ul>
+
+                <ul class="__our-facilities __list">
+
+                    <p class="__subtitle">Our Facilities</p>
+
+                    <li class="__footer-items"><a class="__footer-link" href="#">Restaurant</a></li>
+                    <li class="__footer-items"><a class="__footer-link" href="#">Bars</a></li>
+                    <li class="__footer-items"><a class="__footer-link" href="#">Pick-up</a></li>
+                    <li class="__footer-items"><a class="__footer-link" href="#">Swimming Pool</a></li>
+                    <li class="__footer-items"><a class="__footer-link" href="#">Spa</a></li>
+                    <li class="__footer-items"><a class="__footer-link" href="#">Gym</a></li>
+                </ul>
+
+                <ul class="__subscribe __list">
+
+                    <p class="__subtitle">Subscribe</p>
+
+                    <li class="__footer-items">Sed cursus ut nibh in semper.</li>
+                    <li class="__footer-items">Mauris varius et magna in fermentum.</li>
+                    <li class="__footer-items">
+
+                        <form class="__footer-form" action="#">
+                            <input class="__footer-input" type="email" placeholder="Email Address" required>
+                            <button class="__footer-btn" type="submit">Send</button>
+                        </form>
+
+                    </li>
+                </ul>
+
+                <div class="__social-media">
+                    <a href="#"><i class="fa-brands fa-twitter __sm-icon"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f __sm-icon"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram __sm-icon"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin-in __sm-icon"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+    </footer>
+    <!-- Navbar tabs------------------------------------------------------------------------------------------------- -->
+    <script src="https://kit.fontawesome.com/a574d8f93f.js" crossorigin="anonymous"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/jquery-3.6.3.min.js' %}"></script>
+</body>
+
+</html> 

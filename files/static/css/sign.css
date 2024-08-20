@@ -1,0 +1,22 @@
+.section {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGhvdGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=2000&q=60');
+    height: 1000px;
+    background-attachment: fixed;
+}
+
+.form_1 {
+    margin-top: 150px;
+}
+
+
+.form_2 {
+    margin-top: 150px;
+}
+
+.card {
+    width: 500px;
+    opacity: 90%;
+    background: #7a7a7a;
+    border-radius: 10px;
+    margin-left: 400px;
+}

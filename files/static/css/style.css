@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.header_1 {
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGhvdGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=2000&q=60');
+    background-size: cover;
+    background-position: center;
+
+}
+
+
+.input{
+    padding: 15px;
+    outline: none;
+    border: 1px solid grey;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: lighter;
+}
+
+nav ul li a:hover {
+    transition: .3s;
+    color: #7a7a7a;
+
+}
+
+.level {
+    height: 1000pc;
+}
+
+.box_feature {
+    width: 1300px;
+    margin-left: 50px;
+    margin-top: 70px;
+}
+
+
+.section_feature {
+    background-color: lightgray;
+}
+
+.text1_feature {
+    text-align: center;
+    font-size: 250%;
+    margin-top: 30px;
+}
+
+.btn_book {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 10px;
+    transition: all linear .25s;
+    -webkit-transition: all linear .25s;
+    margin-bottom: 20px;
+}
+
+.btn_book:hover {
+    color: black;
+    background: white;
+}
+
+.box_feature {
+    margin-left: 200px;
+    box-sizing: border-box;
+    width: 1000px;
+    background: white;
+    max-width: 1000px;
+}
+
+ul li ul.dropdown li {
+    display: block;
+    text-align: center;
+}
+
+ul li ul.dropdown {
+    width: 22%;
+    background: black;
+    position: absolute;
+    z-index: 999;
+    display: none;
+    transition: 0.5s;
+}
+ul li ul.dropdown:hover {
+    transition: 0.5s;
+    transform: translateX(-50px);
+}
+ul li:hover ul.dropdown {
+    display: block;
+}
+ul li  a {
+}

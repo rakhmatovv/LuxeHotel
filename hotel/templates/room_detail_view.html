@@ -1,0 +1,99 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/booking.css' %}">
+{% block content %}
+
+    <section class="section" style="background-color:darkgrey">
+        <div class="container">
+            {% if is_success %}
+                <div class="notification is-gray is-size-3 has-text-centered">
+                    <button class="delete"></button>
+                    You booked this room!
+                </div>
+            {% endif %}
+            <div class="columns">
+                <div class="column" style="margin-right: 100px">
+                    <img src="{{ room.img.url }}" alt="" style="">
+                </div>
+                <div class="column booking_clmn">
+                    <h1 class="title ">Room №{{ room.number }}</h1>
+                    <p class="subtitle  mt-4 ">{{ room.description }}</p>
+                    <p class="">
+                        <i class="fa fa-h-square has-text-black" aria-hidden="true"></i> {{ room.category }}</p>
+                    <p><i class="fa fa-bed" aria-hidden="true"> </i>Beds: {{ room.beds }}</p>
+
+                    {% if not booked %}
+                        <form action="" method="post">
+                            {% csrf_token %}
+                            <label for="">
+                                Check in
+                                <input type="datetime-local" data-target='#datetimepicker1' class="form-control"
+                                       value={{ form.check_in }}
+                            </label>
+                            <label for=""> Chek out
+                                <input type="datetime-local" data-target='#datetimepicker1' class="form-control"
+                                       value={{ form.check_out }}
+                            </label>
+                                <br>
+                            <br>
+                            <button type="submit" class="button">Book</button>
+                        </form>
+                    {% endif %}
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{#        <div class="columns">#}
+{#            {% for room in rooms %}#}
+{#                <div class="column">#}
+{#                    <img src="{% static 'images/Room_detail_img.jpg' %}" alt="" height="100px">#}
+{#                </div>#}
+{#                <div class="column">#}
+{#                <h1>{{ room_category }}</h1>#}
+{#                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores id iure mollitia obcaecati quam?#}
+{#                    Magni, quaerat, recusandae? Animi dolore ea earum ex ipsum nostrum, perspiciatis quaerat sapiente#}
+{#                    tenetur unde, ut?</p>#}
+{#                <form action="" method="POST">#}
+{#                {% csrf_token %}#}
+{#                <div class="input-div">#}
+{#                    <label for="id_check_in">Check in </label>#}
+{#                    <input type="datetime-local" id="id_check_in" name="check_in">#}
+{#                </div>#}
+{#                <div class="input-div">#}
+{#                    <label for="id_check_out">Check out </label>#}
+{#                    <input type="datetime-local" id="id_check_out" name="check_out">#}
+{#                </div>#}
+{#            {% endfor %}#}
+{#            <div class="input-div">#}
+{#                <button type="submit">Book the room</button>#}
+{#            </div>#}
+{#            </form>#}
+{#            </div>#}
+{#        </div>#}

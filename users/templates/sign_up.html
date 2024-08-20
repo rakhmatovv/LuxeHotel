@@ -1,0 +1,47 @@
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/bulma.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bulma.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sign.css' %}">
+
+</head>
+<body>
+<section class="section">
+    <form class=" card form_1" method="post">
+        <h1 class="title  is-size-2 has-text-centered has-text-white">Sign Up Form</h1>
+        {% csrf_token %}
+
+
+        {% for f in form %}
+            {##}
+            {#            <p class="has-text-centered has-text-white"><label class="form-label "#}
+            {#                                                               for="{{ f.id_for_label }}">{{ f.label }}: </label>{{ f }}#}
+            {#            </p>#}
+            <p class="has-text-white has-text-centered"><label class="form-label"
+                                                               for="{{ f.id_for_label }}">{{ f.label }}: </label><br>
+                {{ f }}</p>
+            <div class="form-error ">{{ f.errors }}</div>
+
+        {% endfor %}
+
+
+        {#        <button type="submit" class="button" style=>Confirm</button>#}
+        <button class="button  mt-4" type="submit" style="margin-left: 210px">Submit</button>
+
+
+        <p class="content">
+            Already have an account?
+            <span>
+                <a href="{% url 'users:sign_in' %}">Sign in here</a>
+            </span>
+        </p>
+
+    </form>
+
+</section>
+
+</body>
+</html>

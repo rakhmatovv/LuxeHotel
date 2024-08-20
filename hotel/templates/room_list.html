@@ -1,0 +1,29 @@
+{% extends 'base_layout.html' %}
+{% block content %}
+    <section class="section">
+        <div class="columns is-centered columns_Room">
+            {% for room in rooms %}
+                {% if room.status == True %}
+                <div class="column is-3 ">
+                    <div class="box boxx">
+                        <img src="{{ room.img.url }}" alt="Error">
+                        <p class="subtitle">Room №{{ room.number }}</p>
+                        <p class="has-text-grey-light">{{ room.description }}</p>
+                        <br>
+                        <div class="container has-text-centered">
+                            {% if user.is_authenticated %}
+                            <a href="{% url 'hotel:room_detail' room.slug %}" class="btn_book">Book now</a>
+                                {% else %}
+                                <a href="{% url 'users:sign_in' %}" class="btn_book">Book now</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        <br><br><br><br>
+        <br><br><br><br>
+    </section>
+{% endblock %}

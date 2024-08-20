@@ -1,0 +1,40 @@
+{% load static %}
+<html>
+<head>
+    <link rel="stylesheet" href="{% static 'css/bulma.css' %}">
+    <link rel="stylesheet" href="{% static 'css/bulma.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.css' %}">
+    <link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sign.css' %}">
+
+</head>
+<body>
+<section class="section">
+    <div class="users card">
+        <form class="form_2" method="post">
+            <h1 class="head has-text-white title has-text-centered">Sign in</h1>
+            {% csrf_token %}
+
+
+            {% for f in form %}
+                <p class="has-text-white has-text-centered"><label class="form-label"
+                                                                   for="{{ f.id_for_label }}">{{ f.label }}: </label><br>
+                    {{ f }}</p>
+                <div class="form-error">{{ f.errors }}</div>
+            {% endfor %}
+
+            <div class="form-error">{{ form.non_field_errors }}</div>
+            <button class="button  mt-4" type="submit" style="margin-left: 210px">Login</button>
+
+            <p class="content has-text-white mt-5 " style="margin-left: 120px">
+                Don't have an account?
+                <span>
+             <a href="{% url 'users:sign_up' %}">Sign up here</a>
+         </span>
+            </p>
+
+        </form>
+    </div>
+</section>
+</body>
+</html>

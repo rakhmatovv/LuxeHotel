@@ -1,0 +1,93 @@
+.header_1{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("https://images.unsplash.com/photo-1564501049412-61c2a3083791?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fGhvdGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=2000&q=60");
+    background-size: cover;
+    background-position: center;
+}
+
+.container2 {
+    background: lightgrey;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+nav ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    transition: .3s;
+    color: #7a7a7a;
+
+}
+
+ul li ul.dropdown li {
+    display: block;
+}
+
+ul li ul.dropdown {
+    width: 100%;
+    background: black;
+    position: absolute;
+    z-index: 999;
+    display: none;
+}
+
+ul li:hover ul.dropdown {
+    display: block;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 40px;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.logo {
+    color: white;
+    font-size: 28px;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.hero_text {
+    text-align: center;
+    color: white;
+    margin-top: 250px;
+    font-size: 80px;
+}
+
+.btn_book {
+    background-color: black;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-family: sans-serif;
+    font-size: 10px;
+    transition: all linear .25s;
+    -webkit-transition: all linear .25s;
+}
+
+.btn_book:hover {
+    color: black;
+    background: white;
+}
+
+.text1_feature {
+    font-size: 50px;
+}

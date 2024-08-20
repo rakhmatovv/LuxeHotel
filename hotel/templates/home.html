@@ -1,0 +1,434 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+{% block content %}
+
+    <nav class="level" style="height: 170px">
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="title">20356</p>
+                <p class="heading">USER ACCESS</p>
+            </div>
+        </div>
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="title">15501</p>
+                <p class="heading">HOTELS</p>
+            </div>
+        </div>
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="title">8200</p>
+                <p class="heading">TRANSACTIONS</p>
+            </div>
+        </div>
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="title">8763</p>
+                <p class="heading">RATING & REVIEW</p>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Level---------------------------------------------------------------------------------------------- -->
+
+
+    <section class="__featured-hotels">
+        <div class="__fh-container">
+
+            <h1 class="__fh-title">Featured hotels</h1>
+
+            <div class="__fh-block">
+
+                <div class="__hover-price">
+                    <div class="__in-block">
+                        <span class="__fh-price-text">FOR AS LOW AS</span>
+                        <span class="__fh-price-num">$100/night</span>
+                    </div>
+                </div>
+
+                <img src="{% static 'images/featured-hotel_1.jpg' %}" alt="" class="__fh-image">
+
+                <div class="__fh-block-text">
+                    <h1 class="__fh-block-title">Deluxe Hotel</h1>
+
+                    <p class="__fh-block-desc">
+                        Pellentesque habitant morbi tristique senectus et netus ett mauada fames ac turpis egestas.
+                        Etiam euismod tempor leo, in suscipit urna condimentum sed. Vivamus augue enim, consectetur ac
+                        interdum a, pulvinar ac massa. Nullam malesuada congue
+                    </p>
+
+                    <button class="__fh-book-now">Book now</button>
+
+                </div>
+            </div>
+
+            <div class="__fh-tight-blocks">
+
+                <div class="__fh-tight-block">
+
+                    <div class="__hover-price">
+                        <div class="__in-block">
+                            <span class="__fh-price-text">FOR AS LOW AS</span>
+                            <span class="__fh-price-num">$99/night</span>
+                        </div>
+                    </div>
+
+                    <div class="__fh-tight-block-text">
+                        <h1 class="__fh-block-title">Hotel Bora</h1>
+
+                        <p class="__fh-block-desc">
+                            Pellentesque habitant morbi tristique senectus et netus ett mauada fames ac turpis egestas.
+                            Etiam euismod tempor leo, in suscipit urna condimentum sed.
+                        </p>
+
+                        <button class="__fh-book-now"> Book now</button>
+                    </div>
+
+                    <img src="{% static 'images/featured-hotel_3.jpg' %}" alt="" class="__fh-tight-image">
+                </div>
+
+                <div class="__fh-tight-block">
+
+                    <div class="__fh-tight-block-text">
+                        <h1 class="__fh-block-title">Bora</h1>
+
+                        <p class="__fh-block-desc">
+                            Pellentesque habitant morbi tristique senectus et netus ett mauada fames ac turpis egestas.
+                            Etiam euismod tempor leo, in suscipit urna condimentum sed.
+                        </p>
+
+                        <button class="__fh-book-now">Book now</button>
+                    </div>
+
+                    <div class="__fh-tight-image-block">
+                        <div class="__hover-price-ex">
+                            <div class="__in-block">
+                                <span class="__fh-price-text">FOR&nbsp;AS&nbsp;LOW&nbsp;AS</span>
+                                <span class="__fh-price-num">$99/night</span>
+                            </div>
+                        </div>
+
+                        <img src="{% static 'images/featured-hotel_2.jpg' %}" alt="" class="__fh-tight-image">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Restaurant-------------------------------------------------------------------------------------------------- -->
+
+    <div class="__shell">
+
+        <header class="__header">
+            <div class="__container">
+
+                <h1 class="__tag-title">Hotel Facilites</h1>
+
+                <ul class="__bar">
+                    <li class="__bar-items active" id="defaultOpen" onclick="openTab(event, 'Restaurant')">
+                        <i class="__bar-icons fa-sharp fa-solid fa-utensils"></i>
+                        Restaurant
+                    </li>
+
+                    <li class="__bar-items" onclick="openTab(event, 'Bars')">
+                        <i class="__bar-icons fa-solid fa-champagne-glasses"></i>
+                        Bar
+                    </li>
+
+                    <li class="__bar-items" onclick="openTab(event, 'Pick-up')">
+                        <i class="__bar-icons fa-sharp fa-solid fa-car-side"></i>
+                        Pick-&nbsp;Up
+                    </li>
+
+                    <li class="__bar-items" onclick="openTab(event, 'Swimming_pool')">
+                        <i class="__bar-icons fa-solid fa-person-swimming"></i>
+                        Swimming&nbsp;Pool
+                    </li>
+
+                    <li class="__bar-items" onclick="openTab(event, 'Spa')">
+                        <i class="__bar-icons fa-solid fa-bath"></i>
+                        Spa
+                    </li>
+                    <li class="__bar-items" onclick="openTab(event, 'Gym')">
+                        <i class="__bar-icons fa-solid fa-dumbbell"></i>
+                        Gym
+                    </li>
+                </ul>
+
+            </div>
+        </header>
+
+
+        <main class="__main">
+
+            <!-- Tabs -->
+            <!-- Restaurant-------------------------------------------------------------------------------------------------- -->
+
+            <section class="__tabs tabcontent" id="Restaurant">
+                <div class="__container">
+                    <div class="__tab-block __tb">
+                        <div class="__image-block">
+                            <img class="__img" src="{% static '/images/restaurant.jpg' %}" alt="High Class Food">
+                        </div>
+
+                        <div class="__text-block">
+                            <p class="__class">World class</p>
+
+                            <h2 class="__title">Restaurant</h2>
+
+                            <p class="__tab-about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
+                                officia perferendis modi impedit, rem quasi veritatis. Consectetur obcaecati incidunt,
+                                quae
+                                rerum, accusamus sapiente fuga vero at. Quia, labore, reprehenderit illum dolorem quae
+                                facilis reiciendis quas similique totam sequi ducimus temporibus ex nemo, omnis
+                                perferendis
+                                earum fugit impedit molestias animi vitae.</p>
+
+                            <p class="__tab-about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+                                neque blanditiis eveniet nesciunt, beatae similique doloribus, ex impedit rem officiis
+                                placeat dignissimos molestias temporibus, in! Minima quod, consequatur neque aliquam.
+                            </p>
+
+                            <p class="__work-hours">SERVICE HOURS</p>
+
+                            <p class="__hours">7:30 am - 8:00 pm</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Restaurant-------------------------------------------------------------------------------------------------- -->
+
+
+            <!-- Bars-------------------------------------------------------------------------------------------------------- -->
+
+            <section class="__tabs tabcontent" id="Bars">
+                <div class="__container">
+                    <div class="__tab-block __tb">
+                        <div class="__image-block">
+                            <img class="__img" src="{% static 'images/bars.jpg' %}" alt="High Class Food">
+                        </div>
+
+                        <div class="__text-block">
+                            <p class="__class">World class</p>
+
+                            <h2 class="__title">Bars</h2>
+
+                            <p class="__tab-about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
+                                officia perferendis modi impedit, rem quasi veritatis. Consectetur obcaecati incidunt,
+                                quae
+                                rerum, accusamus sapiente fuga vero at. Quia, labore, reprehenderit illum dolorem quae
+                                facilis reiciendis quas similique totam sequi ducimus temporibus ex nemo, omnis
+                                perferendis
+                                earum fugit impedit molestias animi vitae.</p>
+
+                            <p class="__tab-about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+                                neque blanditiis eveniet nesciunt, beatae similique doloribus, ex impedit rem officiis
+                                placeat dignissimos molestias temporibus, in! Minima quod, consequatur neque aliquam.
+                            </p>
+
+                            <p class="__work-hours">SERVICE HOURS</p>
+
+                            <p class="__hours">7:30 am - 8:00 pm</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bars-------------------------------------------------------------------------------------------------------- -->
+
+
+            <!-- Pick-up----------------------------------------------------------------------------------------------------- -->
+
+            <section class="__tabs tabcontent" id="Pick-up">
+                <div class="__container">
+                    <div class="__tab-block __tb">
+                        <div class="__image-block">
+                            <img class="__img" src="{% static '/images/pick-up.jpg' %}" alt="High Class Food">
+                        </div>
+
+                        <div class="__text-block">
+                            <p class="__class">World class</p>
+
+                            <h2 class="__title">Pick Up</h2>
+
+                            <p class="__tab-about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
+                                officia perferendis modi impedit, rem quasi veritatis. Consectetur obcaecati incidunt,
+                                quae
+                                rerum, accusamus sapiente fuga vero at. Quia, labore, reprehenderit illum dolorem quae
+                                facilis reiciendis quas similique totam sequi ducimus temporibus ex nemo, omnis
+                                perferendis
+                                earum fugit impedit molestias animi vitae.</p>
+
+                            <p class="__tab-about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+                                neque blanditiis eveniet nesciunt, beatae similique doloribus, ex impedit rem officiis
+                                placeat dignissimos molestias temporibus, in! Minima quod, consequatur neque aliquam.
+                            </p>
+
+                            <p class="__work-hours">SERVICE HOURS</p>
+
+                            <p class="__hours">7:30 am - 8:00 pm</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Pick-up----------------------------------------------------------------------------------------------------- -->
+
+
+            <!-- Swimming pool----------------------------------------------------------------------------------------------- -->
+
+            <section class="__tabs tabcontent" id="Swimming_pool">
+                <div class="__container">
+                    <div class="__tab-block __tb">
+                        <div class="__image-block">
+                            <img class="__img" src="{% static '/images/swimming-pool.jpg' %}" alt="High Class Food">
+                        </div>
+
+                        <div class="__text-block">
+                            <p class="__class">World class</p>
+
+                            <h2 class="__title">Swimming Pool</h2>
+
+                            <p class="__tab-about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
+                                officia perferendis modi impedit, rem quasi veritatis. Consectetur obcaecati incidunt,
+                                quae
+                                rerum, accusamus sapiente fuga vero at. Quia, labore, reprehenderit illum dolorem quae
+                                facilis reiciendis quas similique totam sequi ducimus temporibus ex nemo, omnis
+                                perferendis
+                                earum fugit impedit molestias animi vitae.</p>
+
+                            <p class="__tab-about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+                                neque blanditiis eveniet nesciunt, beatae similique doloribus, ex impedit rem officiis
+                                placeat dignissimos molestias temporibus, in! Minima quod, consequatur neque aliquam.
+                            </p>
+
+                            <p class="__work-hours">SERVICE HOURS</p>
+
+                            <p class="__hours">7:30 am - 8:00 pm</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Swimming pool----------------------------------------------------------------------------------------------- -->
+
+
+            <!-- Spa----------------------------------------------------------------------------------------------- -->
+
+            <section class="__tabs tabcontent" id="Spa">
+                <div class="__container">
+                    <div class="__tab-block __tb">
+                        <div class="__image-block">
+                            <img class="__img" src="{% static '/images/spa.jpg' %}" alt="High Class Food">
+                        </div>
+
+                        <div class="__text-block">
+                            <p class="__class">World class</p>
+
+                            <h2 class="__title">Spa</h2>
+
+                            <p class="__tab-about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
+                                officia perferendis modi impedit, rem quasi veritatis. Consectetur obcaecati incidunt,
+                                quae
+                                rerum, accusamus sapiente fuga vero at. Quia, labore, reprehenderit illum dolorem quae
+                                facilis reiciendis quas similique totam sequi ducimus temporibus ex nemo, omnis
+                                perferendis
+                                earum fugit impedit molestias animi vitae.</p>
+
+                            <p class="__tab-about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+                                neque blanditiis eveniet nesciunt, beatae similique doloribus, ex impedit rem officiis
+                                placeat dignissimos molestias temporibus, in! Minima quod, consequatur neque aliquam.
+                            </p>
+
+                            <p class="__work-hours">SERVICE HOURS</p>
+
+                            <p class="__hours">7:30 am - 8:00 pm</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Spa----------------------------------------------------------------------------------------------- -->
+
+
+            <!-- Gym----------------------------------------------------------------------------------------------- -->
+
+            <section class="__tabs tabcontent" id="Gym">
+                <div class="__container">
+                    <div class="__tab-block __tb">
+                        <div class="__image-block">
+                            <img class="__img" src="{% static '/images/gym.jpg' %}" alt="High Class Food">
+                        </div>
+
+                        <div class="__text-block">
+                            <p class="__class">World class</p>
+
+                            <h2 class="__title">Gym</h2>
+
+                            <p class="__tab-about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias
+                                officia perferendis modi impedit, rem quasi veritatis. Consectetur obcaecati incidunt,
+                                quae
+                                rerum, accusamus sapiente fuga vero at. Quia, labore, reprehenderit illum dolorem quae
+                                facilis reiciendis quas similique totam sequi ducimus temporibus ex nemo, omnis
+                                perferendis
+                                earum fugit impedit molestias animi vitae.</p>
+
+                            <p class="__tab-about">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam
+                                neque blanditiis eveniet nesciunt, beatae similique doloribus, ex impedit rem officiis
+                                placeat dignissimos molestias temporibus, in! Minima quod, consequatur neque aliquam.
+                            </p>
+
+                            <p class="__work-hours">SERVICE HOURS</p>
+
+                            <p class="__hours">7:30 am - 8:00 pm</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <section class="__customer-says">
+        {% if reviews %}
+            <div class="__container">
+            <h1 class="__customer-says-title">Happy Customer Says...</h1>
+            <div class="__comments">
+                {% for review in reviews.all %}
+                    <div class="__comment">
+                        <p class="__comment-text">{{ review.review }}</p>
+                        <span class="__triangle"></span>
+
+                        <span class="__customer-name"><i>{{ review.name }}</i></span>
+                    </div>
+                {% endfor %}
+            </div>
+        {% else %}
+            <div class="title is-size-3 has-text-centered">No reviews yet. Be first to leave one</div>
+        {% endif %}
+        </div>
+    </section>
+    <section class="section">
+        <form method="post" class="has-text-centered is-outlined" action="">
+            {% csrf_token %}
+            <div class="columns">
+                <div class="column">
+                    <h1 class="has-text-centered">Reviews</h1>
+                    <input type="text" name="name" placeholder="Name" class="input is-rounded" required><br><br>
+                    <textarea id="" cols="72" rows="5" name="review" placeholder="Write your comment" class="is-rounded"
+                              required></textarea><br><br>
+                    <button type="submit" class="btn btn_submit is-rounded" style="background: darkorange">Add</button>
+                    <span>{{ error }}</span>
+                </div>
+                <div class="column">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1386.1110474877796!2d64.4531726474337!3d39.76605089430704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f5005d2cc77004d%3A0xa715c045b7222aa8!2s7-IDUM!5e0!3m2!1sru!2s!4v1677935926305!5m2!1sru!2s"
+                            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </form>
+    </section>
+{% endblock %}

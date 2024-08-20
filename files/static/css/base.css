@@ -1,0 +1,150 @@
+.__featured-hotels {
+    background-color: rgb(230, 230, 230);
+    padding-bottom: 150px;
+}
+
+.__fh-container {
+    max-width: 1250px;
+    margin: 0 auto;
+}
+
+.__fh-title {
+    text-align: center;
+    padding: 100px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: normal;
+    color: rgb(76, 76, 76);
+    font-size: 22px;
+}
+
+.__fh-image {
+    max-width: 625px;
+}
+
+.__fh-block {
+    display: flex;
+}
+
+.__fh-block-text {
+    padding: 50px 80px 50px 50px;
+    background-color: rgb(255, 255, 255);
+}
+
+.__fh-block-title {
+    font-size: 26px;
+    color: rgb(76, 76, 76);
+}
+
+.__fh-block-desc {
+    font-size: 18px;
+    color: rgb(132, 132, 132);
+    line-height: 2;
+    padding: 10px 0;
+}
+
+.__fh-book-now {
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    background: rgb(60, 65, 70);
+}
+
+.__fh-tight-blocks {
+    display: flex;
+    margin-top: 30px;
+}
+
+.__fh-tight-block {
+    display: flex;
+    max-width: 625px;
+}
+
+.__fh-tight-block-text {
+    padding: 30px;
+    background-color: white;
+}
+
+
+.__fh-tight-image {
+    max-width: 320px;
+}
+
+
+.__fh-price-text {
+    color: rgb(255, 171, 145);
+    font-size: 12px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.__fh-price-num {
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-top: 5px;
+}
+
+.__hover-price {
+    position: absolute;
+    background: rgb(255, 87, 34);
+    padding: 0 40px;
+    max-width: 173.36px;
+    max-height: 67px;
+    left: 50%;
+    transition: .2s;
+    z-index: 5;
+}
+
+.__hover-price-ex {
+    background: rgb(255, 87, 34);
+    padding: 0 40px;
+    max-width: 173.36px;
+    max-height: 67px;
+    z-index: 5;
+    transition: .3s;
+    position: absolute;
+    margin-left: 312px;
+    z-index: -1;
+}
+
+.__in-block {
+    display: flex;
+    flex-direction: column;
+}
+
+.__fh-block-text {
+    z-index: 10;
+}
+
+.__fh-tight-block-text {
+    z-index: 10;
+}
+
+.__fh-block:hover .__hover-price {
+    transition: .2s;
+    transform: translate(-173px);
+}
+
+.__fh-tight-block:hover .__hover-price {
+    transition: .2s;
+    transform: translate(-173px);
+}
+
+.__fh-tight-block:hover .__hover-price-ex {
+    transition: .2s;
+    transform: translate(-173px);
+    z-index: 1;
+}
+
+.__fh-tight-block-text {
+    width: 320px;
+}
+
+.__fh-tight-image-block {
+    width: 320px;
+    overflow: hidden;
+}

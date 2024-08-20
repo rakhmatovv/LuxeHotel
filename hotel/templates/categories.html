@@ -1,0 +1,7 @@
+{% for category in categories %}
+    <li>
+        <a href="{% url 'shop:products' %}?category={{ category.pk }}" class="dropdown-item is-size-5">
+            {{ category }}
+        </a>
+    </li>
+{% endfor %}
